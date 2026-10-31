@@ -1,0 +1,101 @@
+/* Blood War Chronicles - Ex.6 JavaScript Styles and Animations */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: #fdf6ec;
+  color: #2b2b2b;
+}
+
+/* Header and nav */
+.header { background: #263c5f; color: #fff; text-align: center; padding: 28px 20px 22px; }
+.header h1 { margin: 0; font-size: 34px; letter-spacing: 1px; }
+.tagline { margin: 6px 0 0; color: #ffd9b3; font-size: 15px; }
+
+.nav { background: #e8731a; text-align: center; }
+.nav a { display: inline-block; color: #fff; text-decoration: none; font-weight: bold; padding: 12px 20px; }
+.nav a:hover { background: #c95f0e; }
+
+/* Layout */
+.container { width: 90%; max-width: 860px; margin: 24px auto; }
+.banner { display: block; width: 100%; height: 220px; object-fit: cover; border-radius: 6px; }
+.section {
+  background: #ffffff;
+  margin-top: 22px;
+  padding: 26px 30px 30px;
+  border: 1px solid #ecdcc6;
+  border-radius: 6px;
+  text-align: center;
+}
+.section h2 { margin: 0 0 4px; color: #263c5f; font-size: 26px; }
+.sub { margin: 0 0 20px; color: #7a7064; font-size: 14px; }
+
+/* 1. Clock */
+#time {
+  display: inline-block;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 50px;
+  color: #e8731a;
+  background: #fff4e6;
+  padding: 6px 28px;
+  border-radius: 6px;
+  letter-spacing: 3px;
+}
+#today { margin: 10px 0 0; color: #7a7064; }
+
+/* 2. Aura */
+#aura-box {
+  height: 170px;
+  background: #cccccc;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .55);
+  transition: background-color 1s;
+}
+#aura-box p { margin: 2px 0; }
+.aura-name { font-size: 20px; font-weight: bold; }
+
+/* 3. Zoom paragraph and gallery */
+#para1 { font-size: 16px; margin: 0 0 22px; cursor: default; transition: color .2s; }
+.gallery { display: flex; gap: 16px; }
+.gallery figure { flex: 1; margin: 0; }
+.gallery img { display: block; width: 100%; height: 170px; object-fit: cover; border-radius: 6px; }
+.gallery figcaption { font-size: 13px; color: #7a7064; margin-top: 6px; }
+
+/* 4. Blade */
+#track { position: relative; height: 100px; background: #fff4e6; border: 1px solid #ecdcc6; border-radius: 6px; overflow: hidden; }
+#img { position: relative; left: 0px; top: 20px; }
+.controls { margin-top: 16px; }
+
+.btn {
+  background: #e8731a; color: #fff; border: 2px solid #e8731a; border-radius: 4px;
+  padding: 8px 26px; font-family: inherit; font-weight: bold; font-size: 14px; cursor: pointer; margin: 0 4px;
+}
+.btn:hover { background: #c95f0e; border-color: #c95f0e; }
+.btn-outline { background: #fff; color: #e8731a; }
+.btn-outline:hover { background: #e8731a; color: #fff; }
+
+/* 5. Squad */
+.row { display: flex; gap: 24px; text-align: left; }
+.col { flex: 1; }
+.col h3 { margin: 0 0 10px; color: #263c5f; font-size: 16px; border-bottom: 2px solid #e8731a; padding-bottom: 4px; }
+#student-list p { margin: 0 0 8px; font-size: 15px; }
+.col ul { margin: 0 0 16px; padding-left: 20px; line-height: 1.9; }
+
+/* Footer */
+.footer { background: #263c5f; color: #cdd6e6; text-align: center; padding: 18px 20px; margin-top: 30px; font-size: 13px; }
+.footer p { margin: 2px 0; }
+
+@media (max-width: 700px) {
+  .header h1 { font-size: 26px; }
+  .section { padding: 22px 16px 24px; }
+  .row, .gallery { flex-direction: column; }
+  #time { font-size: 34px; padding: 6px 16px; }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bleach TYBW Fansite - Styles and Animations</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Blood War Chronicles</h1>
+  <p class="tagline">A Bleach: Thousand-Year Blood War fansite (fan made)</p>
+</div>
+
+<div class="nav">
+  <a href="#clock">Clock</a>
+  <a href="#aura">Aura</a>
+  <a href="#archive">Archive</a>
+  <a href="#blade">Blade</a>
+  <a href="#squad">Squad</a>
+</div>
+
+<div class="container">
+
+  <img class="banner" src="banner.png" alt="Sunset over the city skyline">
+
+  <!-- 1. Digital clock -->
+  <div class="section" id="clock">
+    <h2>Digital Clock!</h2>
+    <p class="sub">Soul Society time, updated every second</p>
+    <span id="time"></span>
+    <p id="today"></p>
+  </div>
+
+  <!-- 2. Background colour change -->
+  <div class="section" id="aura">
+    <h2>Dynamic Background!</h2>
+    <p class="sub">The aura box changes to a random colour every 30 seconds</p>
+    <div id="aura-box">
+      <p class="aura-name">Reiatsu Aura</p>
+      <p id="color-name"></p>
+    </div>
+  </div>
+
+  <!-- 3. Font size on mouse over / out -->
+  <div class="section" id="archive">
+    <h2>Change font size!</h2>
+    <p class="sub">Move the cursor over the paragraph to zoom in</p>
+    <p id="para1" onmouseover="incSize()" onmouseout="decSize()">
+      The Thousand-Year Blood War arc brings the Quincy army against Soul Society,
+      and every Soul Reaper must stand and fight &ndash;
+      move cursor over me to zoom in...
+    </p>
+    <div class="gallery">
+      <figure><img src="scene1.png" alt="Moonlit skyline"><figcaption>Night over the city</figcaption></figure>
+      <figure><img src="scene2.png" alt="Gate at dawn"><figcaption>Dawn at the gate</figcaption></figure>
+    </div>
+  </div>
+
+  <!-- 4. Move and stop image -->
+  <div class="section" id="blade">
+    <h2>Spirit Blade</h2>
+    <p class="sub">Click Move to slide the blade, Stop to bring it back</p>
+    <div id="track">
+      <img id="img" src="blade.png" alt="Spirit blade" width="150">
+    </div>
+    <div class="controls">
+      <button class="btn" onclick="moveRight();">Move</button>
+      <button class="btn btn-outline" onclick="stop();">Stop</button>
+    </div>
+  </div>
+
+  <!-- 5. Array of student objects -->
+  <div class="section" id="squad">
+    <h2>Fan Squad</h2>
+    <p class="sub">Members displayed from an array of objects</p>
+    <div class="row">
+      <div class="col">
+        <h3>Register Numbers</h3>
+        <div id="student-list"></div>
+      </div>
+      <div class="col">
+        <h3>Born before 2000</h3>
+        <ul id="before2000"></ul>
+        <h3>Born in or after 2000</h3>
+        <ul id="after2000"></ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Blood War Chronicles &mdash; a fan project, not affiliated with the official anime</p>
+  <p>Web Technology Lab &bull; Ex. 6 &bull; URK24CS1275</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
